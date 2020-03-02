@@ -1,0 +1,19 @@
+{
+  "name": "tantra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start -server --files '*.html, less/*.less, js/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qweeex/tantra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qweeex/tantra/issues"
+  },
+  "homepage": "https://github.com/qweeex/tantra#readme"
+}
