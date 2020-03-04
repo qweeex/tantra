@@ -1,0 +1,71 @@
+.massage{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &-title{
+    h1{
+      font-weight: bold;
+      font-size: 30px;
+      color: #323232;
+    }
+  }
+  &-sex{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    p{
+      font-weight: bold;
+      font-size: 14px;
+      color: #FB0C69;
+      padding-left: 8px;
+    }
+  }
+  &-cart{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(130, 130, 130, 0.21);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    .cart-img{
+      img{
+        width: 100%;
+        box-shadow: 2px 5px 20px rgba(121, 121, 121, 0.21);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+    .cart-title{
+      padding: 15px;
+      p{
+        font-weight: bold;
+        font-size: 16px;
+        color: #292A2A;
+      }
+    }
+    .cart-desc{
+      padding: 15px;
+      padding-top: 0;
+      p{
+        font-weight: normal;
+        font-size: 12px;
+        color: #292A2A;
+      }
+    }
+    .cart-more{
+      padding: 15px;
+      button{
+        width: 161px;
+        height: 36px;
+        background: linear-gradient(90deg, #FF1F1E 0%, #FB0690 100%);
+        border-radius: 100px;
+        font-weight: bold;
+        font-size: 12px;
+        color: #FFFFFF;
+        border: 0;
+        transition: all 0.4s;
+        &:hover{
+          background: linear-gradient(-90deg, #FF1F1E 0%, #FB0690 100%);
+        }
+      }
+    }
+  }
+}

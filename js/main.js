@@ -1,13 +1,14 @@
-$(document).ready(() => {
+$(document).ready(function () {
 
     // Massages slider
-    let massages = new Swiper('.massages-slider', {
+    const massages = new Swiper('.massages-slider', {
         slidesPerView: 3,
         spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
     });
+
+    $('.massages-title').on('click', () => {
+        massages.update();
+    });
+
 
 });
