@@ -1,0 +1,14 @@
+.header {
+  background-color: #fff;
+}
+.header-container {
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.header-row {
+  background: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

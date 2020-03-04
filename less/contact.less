@@ -1,0 +1,150 @@
+.contact{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  &-title{
+    margin-bottom: 40px;
+    h1{
+      font-weight: bold;
+      font-size: 30px;
+      color: #292A2A;
+    }
+  }
+  &-item{
+    display: flex;
+    margin-bottom: 15px;
+    .contact-text{
+      padding-left: 12px;
+      padding-right: 180px;
+      p{
+        color: #323232;
+        padding-top: 2px;
+      }
+    }
+  }
+  &-social{
+    padding-left: 40px;
+    a{
+      padding-right: 10px;
+      path{
+        transition: all 0.4s;
+      }
+      &:hover{
+        path{
+          fill: #FB0C69;
+        }
+      }
+    }
+  }
+  &-form{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(130, 130, 130, 0.21);
+    border-radius: 8px;
+    position: relative;
+    padding: 25px 25px 25px 104px;
+    .contact-sex{
+      height: 44px;
+      width: 109px;
+      background: #FC0C76;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      position: absolute;
+      transform: rotateZ(-90deg) translateX(-33px);
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      p{
+        color: #FFFFFF;
+        font-size: 13px;
+        padding-left: 5px;
+      }
+    }
+    .form-input{
+      margin-bottom: 12px;
+      input{
+        width: 100%;
+        height: 44px;
+        background: #E9E9E9;
+        border: 0;
+        padding-left: 23px;
+        border-radius: 100px;
+        font-style: italic;
+        font-size: 12px;
+      }
+    }
+    .form-textarea{
+      textarea{
+        width: 100%;
+        height: 191px;
+        background: #E9E9E9;
+        border: 0;
+        padding-left: 23px;
+        border-radius: 30px;
+        font-style: italic;
+        font-size: 12px;
+        padding-top: 25px;
+      }
+    }
+    .form-policy{
+      display: flex;
+      margin-top: 10px;
+      input[type="checkbox"]{
+        display: none;
+        &:checked{
+          + label{
+            .policy-icon{
+              img{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .policy-icon{
+        width: 16px;
+        height: 16px;
+        background: #D9D9D9;
+        display: flex;
+        content: '';
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img{
+          width: 80%;
+          opacity: 0;
+        }
+      }
+      p{
+        font-weight: normal;
+        font-size: 12px;
+        color: #5E5E5E;
+        padding-left: 15px;
+        a{
+          text-decoration: underline;
+          color: #5E5E5E;
+        }
+      }
+    }
+    .form-submit{
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      button{
+        width: 161px;
+        height: 36px;
+        background: linear-gradient(90deg, #FF1F1E 0%, #FB0690 100%);
+        border-radius: 100px;
+        font-weight: bold;
+        font-size: 12px;
+        color: #FFFFFF;
+        border: 0;
+        transition: all 0.4s;
+        &:hover{
+          background: linear-gradient(-90deg, #FF1F1E 0%, #FB0690 100%);
+        }
+      }
+    }
+  }
+}

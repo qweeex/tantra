@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Tantra</title>
+    <!--  Open Sans fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <!--  Jquery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!--  Swiper  -->
@@ -64,7 +66,7 @@
             <div class="row">
                 <div class="col-xl-auto">
                     <div class="main-video__info">
-                        <h1>
+                        <h1 class="info-title">
                             Tantrа salon
                             <br>
                             <span>BODY TOUCH</span>
@@ -88,7 +90,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-5">
                     <div class="massages-desc">
                         <p>Read more about our services and find out more about massages – which one is right for you.</p>
                     </div>
@@ -146,26 +148,26 @@
                     <div class="massages-count">
                         <div class="count-info">
                             <p>
-                                <span>01</span>
-                                /05
+                                <span class="count-current">01</span>
+                                / <span class="count-all">05</span>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2">
+                <div class="col-xl-auto ml-auto">
                     <div class="massages-arrows">
                         <div class="arrow-left">
-                            <a href="#"><img src="img/arrow-left.svg" alt=""></a>
+                            <img src="img/arrow-left.svg" alt="">
                         </div>
                         <div class="arrow-slide">
                             <a href="#"><span></span></a>
                             <a href="#"><span></span></a>
                             <a href="#"><span></span></a>
                             <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
+                            <a href="#" class="arrow-slide__active"><span></span></a>
                         </div>
                         <div class="arrow-right">
-                            <a href="#"><img src="img/arrow-rigth.svg" alt=""></a>
+                            <img src="img/arrow-rigth.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -176,12 +178,15 @@
     <div class="team">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-4 offset-xl-1">
                     <div class="team-img">
                         <img src="img/img-team.png" alt="">
+                        <div class="team-name">
+                            <p>Lenka, 34 years old </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-7">
                     <div class="team-title">
                         <h2>Tantra team</h2>
                     </div>
@@ -262,7 +267,9 @@
                         <div class="team-links">
                             <a href="">
                                 <div class="link-all">
-                                    <img src="img/team-all.svg" alt="">
+                                    <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L6 5.5L1 10" stroke="#C4C4C4" stroke-width="2"/>
+                                    </svg>
                                 </div>
                             </a>
                         </div>
@@ -302,7 +309,7 @@
                         <div class="info-content__btn">
                             <a href="">
                                 <button>
-                                    <span>our apartments</span>
+                                    <span class="name">our apartments</span>
                                     <span class="icon">
                                         <img src="img/btn-arr.svg" alt="">
                                     </span>
@@ -359,7 +366,7 @@
                         <div class="visit-info">
                             <p>visit us</p>
                         </div>
-                        <div class="row">
+                        <div class="row no-gutters">
                             <div class="col-xl-6">
                                 <div class="visit-form">
                                     <div class="visit-title">
@@ -375,13 +382,23 @@
                                         <input type="text" placeholder="Email Address">
                                     </div>
                                     <div class="visit-policy">
-                                        <input type="checkbox" >
-                                        <p>I agree to the processing of personal data <a href="">Privacy policy
+                                        <input type="checkbox" id="pol" >
+                                        <label for="pol">
+                                            <span class="policy-icon">
+                                                <img src="img/tick.png" alt="">
+                                            </span>
+                                        </label>
+                                        <p>I agree to the processing of personal data <br><a href="">Privacy policy
                                         </a></p>
                                     </div>
                                     <div class="visit-submit">
                                         <button>Send</button>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="visit-img">
+                                    <img src="img/request-img.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -395,28 +412,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6">
-                    <div class="apartments-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="apartments-slide">
-                                    <img src="img/apartments.png" alt="">
+                    <div class="apartments-wrapper">
+                        <div class="apartments-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="apartments-slide">
+                                        <img src="img/apartments.png" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="apartments-arrows">
-                        <div class="arrow-left">
-                            <a href="#"><img src="img/arrow-left.svg" alt=""></a>
-                        </div>
-                        <div class="arrow-slide">
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                        </div>
-                        <div class="arrow-right">
-                            <a href="#"><img src="img/arrow-rigth.svg" alt=""></a>
+                        <div class="apartments-arrows">
+                            <div class="arrow-left">
+                                <a href="#"><img src="img/arrow-left.svg" alt=""></a>
+                            </div>
+                            <div class="arrow-slide">
+                                <a href="#"><span></span></a>
+                                <a href="#"><span></span></a>
+                                <a href="#" class="arrow-slide__active"><span></span></a>
+                                <a href="#"><span></span></a>
+                                <a href="#"><span></span></a>
+                            </div>
+                            <div class="arrow-right">
+                                <a href="#"><img src="img/arrow-rigth.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -474,8 +493,8 @@
 
     <div class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-2">
+            <div class="row align-items-center">
+                <div class="col-xl-3">
                     <div class="footer-logo">
                         <a href="">
                             <img src="img/logo.png" alt="">
@@ -488,7 +507,7 @@
                             <img src="img/map.svg" alt="">
                         </div>
                         <div class="street-desc">
-                            <p>Klatovská 16
+                            <p>Klatovská 16<Br>
                                 Bratislava</p>
                         </div>
                     </div>
@@ -510,7 +529,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2">
+                <div class="col-xl-3">
                     <div class="footer-callback">
                         <a href="">
                             <button>Visit us</button>
