@@ -10,28 +10,51 @@
     <!--  Open Sans fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
           rel="stylesheet">
-    <!--  Jquery  -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!--  Swiper  -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <script src="js/swiper.min.js"></script>
-    <!--  Custom script  -->
-    <script src="js/main.js"></script>
     <!--  Less compile  -->
     <link rel="stylesheet/less" type="text/css" href="less/main.less"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+    <!--  Swiper CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 </head>
 <body>
 
     <div class="header">
     <div class="header-container">
         <div class="header-row">
-
+            <div class="header-menu header-menu-mob d-block d-lg-none">
+                <div class="header-menu__btn">
+                    <a href="">
+                        <img src="img/header-menu.svg" alt="">
+                    </a>
+                </div>
+                <div class="header-menu___content">
+                    <div class="menu-back">
+                        <a href=""><img src="img/header-menu-close.svg" alt=""></a>
+                    </div>
+                    <div class="menu-list">
+                        <nav>
+                            <a href="index.html" class="menu-list__link">Home</a>
+                            <a href="price.html" class="menu-list__link">Price list</a>
+                            <a href="massages.html" class="menu-list__link">Massages</a>
+                            <a href="contact.html" class="menu-list__link">Contact</a>
+                            <a href="#" class="menu-list__link">Tantra team</a>
+                            <a href="#" class="menu-list__link">Gallery</a>
+                        </nav>
+                    </div>
+                    <div class="menu-social">
+                        <a href="" class="social-link"><img src="img/instagram-white.svg" alt=""></a>
+                        <a href="" class="social-link"><img src="img/facebook-white.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
             <div class="header-logo">
-                <a href=""><img src="img/logo.png" alt="" class="header-logo__img"></a>
+                <a href="">
+                    <img src="img/logo.png" alt="" class="header-logo__img d-none d-md-block">
+                    <img src="img/logo-mobile.png" alt="" class="header-logo__img d-block d-md-none">
+                </a>
             </div>
 
-            <div class="header-menu">
+            <div class="header-menu header-menu_desktop">
                 <nav>
                     <a href="index.html" class="header-menu__link">Home</a>
                     <a href="price.html" class="header-menu__link">Price list</a>
@@ -141,6 +164,45 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="massages-slide">
+                                    <div class="slider-img">
+                                        <img src="img/img-massages.png" alt="">
+                                    </div>
+                                    <div class="slider-title">
+                                        <p>Relaxing massage</p>
+                                    </div>
+                                    <div class="slider-info">
+                                        <p>60 minutes 55 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="massages-slide">
+                                    <div class="slider-img">
+                                        <img src="img/img-massages.png" alt="">
+                                    </div>
+                                    <div class="slider-title">
+                                        <p>Relaxing massage</p>
+                                    </div>
+                                    <div class="slider-info">
+                                        <p>60 minutes 55 €</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="massages-slide">
+                                    <div class="slider-img">
+                                        <img src="img/img-massages.png" alt="">
+                                    </div>
+                                    <div class="slider-title">
+                                        <p>Relaxing massage</p>
+                                    </div>
+                                    <div class="slider-info">
+                                        <p>60 minutes 55 €</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,27 +210,17 @@
             <div class="row">
                 <div class="col-xl-auto">
                     <div class="massages-count">
-                        <div class="count-info">
-                            <p>
-                                <span class="count-current">01</span>
-                                / <span class="count-all">05</span>
-                            </p>
+                        <div class="count-info"></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-auto ml-auto">
                     <div class="massages-arrows">
-                        <div class="arrow-left">
+                        <div class="arrow-left massages-slide-prev">
                             <img src="img/arrow-left.svg" alt="">
                         </div>
-                        <div class="arrow-slide">
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                            <a href="#" class="arrow-slide__active"><span></span></a>
-                        </div>
-                        <div class="arrow-right">
+                        <div class="arrow-slide massages-slide-count"></div>
+                        <div class="arrow-right massages-slide-next">
                             <img src="img/arrow-rigth.svg" alt="">
                         </div>
                     </div>
@@ -267,7 +319,7 @@
                             </div>
                         </div>
                         <div class="team-links">
-                            <a href="">
+                            <a href="team.html">
                                 <div class="link-all">
                                     <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 1L6 5.5L1 10" stroke="#C4C4C4" stroke-width="2"/>
@@ -422,20 +474,30 @@
                                         <img src="img/apartments.png" alt="">
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="apartments-slide">
+                                        <img src="img/apartments1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="apartments-slide">
+                                        <img src="img/apartments2.png" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="apartments-arrows">
-                            <div class="arrow-left">
+                            <div class="arrow-left apartments-slide-next">
                                 <a href="#"><img src="img/arrow-left.svg" alt=""></a>
                             </div>
-                            <div class="arrow-slide">
+                            <div class="arrow-slide apartments-slide-count">
                                 <a href="#"><span></span></a>
                                 <a href="#"><span></span></a>
                                 <a href="#" class="arrow-slide__active"><span></span></a>
                                 <a href="#"><span></span></a>
                                 <a href="#"><span></span></a>
                             </div>
-                            <div class="arrow-right">
+                            <div class="arrow-right apartments-slide-prev">
                                 <a href="#"><img src="img/arrow-rigth.svg" alt=""></a>
                             </div>
                         </div>
@@ -542,6 +604,11 @@
         </div>
     </div>
 
-
+    <!--  Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--  Swiper JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!--  Custom script  -->
+    <script src="js/main.js"></script>
 </body>
 </html>

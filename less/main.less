@@ -27,6 +27,41 @@ body{
     max-width: 100%;
     padding: 21px 30px;
   }
+  .header-menu-mob__active{
+    .header-menu___content{
+      left: 0 !important;
+    }
+  }
+  .header-menu___content{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: @rose;
+    height: 100%;
+    z-index: 50;
+    padding: 15px 40px;
+    transition: all 0.4s;
+    left: -100%;
+    .menu-list{
+      margin-top: 40px;
+      nav{
+        display: flex;
+        flex-flow: column;
+      }
+      &__link{
+        font-weight: normal;
+        font-size: 18px;
+        color: #FFFFFF;
+        padding-bottom: 20px;
+      }
+    }
+    .menu-social{
+      margin-top: 50px;
+      a{
+        margin-right: 20px;
+      }
+    }
+  }
   &-row{
     display: flex;
     flex-flow: row wrap;
@@ -46,7 +81,6 @@ body{
       }
     }
   }
-
   &-lang{
     span{
       background: rgba(76, 76, 76, 0.58);
@@ -72,7 +106,6 @@ body{
       }
     }
   }
-
   &-phone{
     text-align: right;
     &__tel{
@@ -108,7 +141,35 @@ body{
       }
     }
   }
-
+  @media(max-width: 600px) {
+    .header-menu-mob{
+      width: 33%;
+    }
+    .header-logo{
+      width: 33%;
+      img{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .header-phone{
+      width: auto;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .header-lang{
+      width: 34%;
+      text-align: right;
+      &__btn{
+        justify-content: flex-end;
+      }
+    }
+    .header-menu_desktop{
+      display: none;
+    }
+  }
 }
 
 .main-video{
@@ -143,6 +204,9 @@ body{
         }
       }
     }
+  }
+  @media(max-width: 600px){
+    
   }
 }
 
@@ -636,10 +700,15 @@ body{
     border-radius: 8px 0px 0px 8px;
   }
   &-slide{
+    display: flex;
+    justify-content: center;
     img{
       box-shadow: 0px 4px 20px rgba(130, 130, 130, 0.25);
       border-radius: 10px;
       overflow: hidden;
+      width: 442px;
+      height: 326px;
+      object-fit: cover;
     }
   }
   &-arrows{
@@ -826,3 +895,12 @@ body{
 
 /// massage
 @import "massage";
+
+/// price
+@import "price";
+
+/// apart
+@import "apart";
+
+/// text
+@import "text";
