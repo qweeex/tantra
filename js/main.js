@@ -6,6 +6,16 @@ $(document).ready(function () {
     // Apartments slider
     InitApartmentsSlider();
 
+    // Header mobile menu
+    $('.header-menu__btn > a').on('click', (e) => {
+        e.preventDefault();
+        $('.header-menu-mob').addClass('header-menu-mob__active');
+    });
+    $('.menu-back > a').on('click', (e) => {
+        e.preventDefault();
+        $('.header-menu-mob').removeClass('header-menu-mob__active');
+    });
+
 });
 
 function InitMassagesSlider() {
@@ -16,6 +26,22 @@ function InitMassagesSlider() {
         slidesPerView: countSlides,
         spaceBetween: 30,
         init: false,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 2
+            },
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },
+            // when window width is >= 640px
+            1000: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
     });
 
 

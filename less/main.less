@@ -206,12 +206,36 @@ body{
     }
   }
   @media(max-width: 600px){
-    
+    height: 312px;
+    &__info{
+      margin-top: 100px;
+      .info-title{
+        font-size: 18px;
+        span{
+          font-size: 32px;
+        }
+      }
+    }
   }
 }
 
 .massages{
   margin-top: 110px;
+  @media (max-width: 600px){
+    margin-top: 50px;
+    &-desc{
+      margin-bottom: 25px;
+    }
+    &-count{
+      margin-top: 20px !important;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &-arrows{
+      margin-top: 20px !important;
+      justify-content: flex-end;
+    }
+  }
   &-title{
     h2{
       font-weight: bold;
@@ -463,6 +487,60 @@ body{
       }
     }
   }
+  @media(max-width: 600px){
+    height: auto;
+    padding-bottom: 50px;
+    &-title{
+      padding-top: 50px;
+    }
+    &-desc{
+      width: 100%;
+      p{
+        font-size: 13px;
+      }
+    }
+    &-img{
+      padding-top: 0px;
+      height: 345px;
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .team-name{
+        p{
+          font-size: 11px;
+        }
+      }
+    }
+
+    &-contact{
+      display: none;
+    }
+
+    &-list{
+      width: 100%;
+    }
+    &-item{
+      margin-right: 0;
+      display: none;
+      &:nth-child(1){
+        display: block;
+      }
+      &:nth-child(2){
+        display: block;
+      }
+    }
+
+    .team-desktop{
+      .team-title{
+        display: none;
+      }
+      .team-desc{
+        display: none;
+      }
+    }
+  }
 }
 
 .info{
@@ -548,6 +626,39 @@ body{
         font-size: 12px;
         line-height: 140%;
         color: rgba(41, 42, 42, 0.58);
+      }
+    }
+  }
+  @media(max-width: 600px){
+    margin-top: 0;
+    &-img{
+      img{
+        max-width: 100%;
+      }
+    }
+    &-list{
+      margin-top: 40px;
+    }
+    &-item{
+      margin-bottom: 15px;
+      .item-content{
+        padding-right: 0;
+      }
+    }
+    &-content{
+      padding-left: 0;
+      margin-top: 40px;
+      &__desc{
+        margin-right: 0;
+        margin-bottom: 15px;
+        p{
+          text-align: justify;
+        }
+      }
+      &__btn{
+        position: absolute;
+        top: 600px;
+        left: 15px;
       }
     }
   }
@@ -681,6 +792,50 @@ body{
       }
     }
   }
+  @media(max-width: 600px){
+    margin-top: 100px;
+    &:before{
+      width: 100%;
+      height: 500px;
+      top: -59px;
+    }
+    &-info{
+      display: none;
+    }
+    &-card{
+      height: auto;
+    }
+    &-form{
+      padding-left: 15px;
+      padding-right: 15px;
+      .visit-title{
+        p{
+          font-size: 23px;
+          text-align: center;
+        }
+      }
+      .visit-input{
+        input{
+          width: 100%;
+        }
+      }
+      .visit-policy{
+        p{
+          br{
+            display: none;
+          }
+        }
+      }
+      .visit-submit{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+    }
+    &-img{
+      display: none;
+    }
+  }
 }
 
 .apartments{
@@ -805,9 +960,38 @@ body{
       }
     }
   }
+  @media(max-width: 600px){
+    height: auto;
+    margin-top: 120px;
+    position: relative;
+    padding-top: 20px;
+    &-content{
+      .content-desc{
+        width: 100%;
+      }
+    }
+    .apartments-desktop{
+      .apartments-content{
+        .content-desc,
+        .content-title,
+        .content-visit{
+          display: none;
+        }
+      }
+    }
+    &-slide{
+      width: 90%;
+      margin-top: 5%;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 .footer{
+  margin-top: 15px;
   background: #fff;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -882,6 +1066,27 @@ body{
       &:hover{
         background: linear-gradient(-90deg, #FF1F1E 0%, #FB0690 100%);
       }
+    }
+  }
+  @media(max-width: 600px){
+    &-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+    &-phone{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 20px;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+    &-callback{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
