@@ -1,74 +1,40 @@
 $(document).ready(function () {
 
     // Massages slider
-    InitMassagesSlider();
-
-    // Apartments slider
-    InitApartmentsSlider();
-
-    // Header mobile menu
-    $('.header-menu__btn > a').on('click', (e) => {
-        e.preventDefault();
-        $('.header-menu-mob').addClass('header-menu-mob__active');
-    });
-    $('.menu-back > a').on('click', (e) => {
-        e.preventDefault();
-        $('.header-menu-mob').removeClass('header-menu-mob__active');
-    });
-
-});
-
-function InitMassagesSlider() {
-
     let countSlides = 3;
-
-    var massages = new Swiper('.massages-slider', {
+    let massages = new Swiper('.massages-slider', {
         slidesPerView: countSlides,
         spaceBetween: 30,
         init: false,
         breakpoints: {
             // when window width is >= 320px
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 2
+            1000: {
+                slidesPerView: 3,
+                spaceBetween: 10
             },
-            500: {
+            620: {
                 slidesPerView: 2,
                 spaceBetween: 10
             },
             // when window width is >= 640px
-            1000: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            }
+            500: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
         }
     });
-
-
     massages.on('init', () => {
-        updateCount(massages.activeIndex, massages.slides.length)
+        updateCount(massages.activeIndex, massages.slides.length);
     });
-
     massages.on('slideChange', function () {
-        updateCount(massages.activeIndex, massages.slides.length)
+        updateCount(massages.activeIndex, massages.slides.length);
     });
-
-    $(window).on('load', () => {
-        massages.init();
-        setTimeout(function () {
-            massages.init();
-        }, 1000);
-    });
-
     $('.massages-slide-prev').on('click', () => {
         massages.slidePrev();
     });
-
     $('.massages-slide-next').on('click', () => {
         massages.slideNext();
     });
-
-
     function updateCount(num, all) {
         let current = parseInt(num);
         let total = parseInt(all);
@@ -91,10 +57,9 @@ function InitMassagesSlider() {
             `
         );
 
-        updatePagination(num, massages.slides);
+        updatePaginationMassages(num, massages.slides);
     }
-
-    function updatePagination(num, all) {
+    function updatePaginationMassages(num, all) {
         $('.massages-slide-count').empty();
         $.each(all, function(index, value) {
             if (index === num) {
@@ -118,43 +83,27 @@ function InitMassagesSlider() {
 
     }
 
-}
-
-function InitApartmentsSlider() {
-
+    // Apartments slider
     var Apartments = new Swiper('.apartments-slider', {
         slidesPerView: 1,
         effect: 'fade',
         init: false
     });
-
     Apartments.on('init', () => {
-        updatePagination(Apartments.activeIndex, Apartments.slides)
+        updatePaginationApartments(Apartments.activeIndex, Apartments.slides)
     });
-
     Apartments.on('slideChange', function () {
-        updatePagination(Apartments.activeIndex, Apartments.slides)
+        updatePaginationApartments(Apartments.activeIndex, Apartments.slides)
     });
-
-    $(window).on('load', () => {
-        Apartments.init();
-        setTimeout(function () {
-            Apartments.init();
-        }, 1000);
-    });
-
     $('.apartments-slide-prev').on('click', (e) => {
         e.preventDefault();
         Apartments.slideNext();
     });
-
     $('.apartments-slide-next').on('click', (e) => {
-       e.preventDefault();
-       Apartments.slidePrev();
+        e.preventDefault();
+        Apartments.slidePrev();
     });
-
-
-    function updatePagination(num, all) {
+    function updatePaginationApartments(num, all) {
         $('.apartments-slide-count').empty();
         $.each(all, function(index, value) {
             if (index === num) {
@@ -178,4 +127,42 @@ function InitApartmentsSlider() {
 
     }
 
-}
+    //
+    $(window).on('load', () => {
+        Apartments.init();
+        setTimeout(function () {
+            Apartments.init();
+        }, 1000);
+        massages.init();
+        massages.update();
+        setTimeout(function () {
+            massages.init();
+            massages.update();
+        }, 1000);
+    });
+
+    // Header mobile menu
+    $('.header-menu__btn > a').on('click', (e) => {
+        e.preventDefault();
+        $('.header-menu-mob').addClass('header-menu-mob__active');
+    });
+    $('.menu-back > a').on('click', (e) => {
+        e.preventDefault();
+        $('.header-menu-mob').removeClass('header-menu-mob__active');
+    });
+
+    // Video background
+    $('.jquery-background-video').bgVideo();
+
+    // Popup show
+    $('[data-popup]').on('click', (e) => {
+        if (e.target.parentElement.tagName == 'A' || e.target.tagName == 'A'){
+            e.preventDefault();
+        }
+        $('.popup').addClass('popup-show');
+    });
+    $('.popup-bg').on('click', () => {
+        $('.popup').removeClass('popup-show');
+    });
+
+});

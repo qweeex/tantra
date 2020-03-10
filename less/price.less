@@ -1,6 +1,14 @@
 .priceList{
   margin-top: 100px;
   margin-bottom: 100px;
+  position: relative;
+  &:before{
+    content: url(/img/team-mask.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
   &-title{
     h1{
       font-weight: bold;

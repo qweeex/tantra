@@ -1,5 +1,18 @@
 .about{
   margin-top: 100px;
+  position: relative;
+  &:before{
+    content: url("/img/what-mask.png");
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+  + .info{
+    &:before{
+      display: none;
+    }
+  }
   &-title{
     h1{
       font-weight: bold;

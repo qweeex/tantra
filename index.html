@@ -10,6 +10,7 @@
     <!--  Open Sans fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
           rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.background-video.css">
     <!--  Less compile  -->
     <link rel="stylesheet/less" type="text/css" href="less/main.less"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
@@ -37,8 +38,8 @@
                             <a href="price.html" class="menu-list__link">Price list</a>
                             <a href="massages.html" class="menu-list__link">Massages</a>
                             <a href="contact.html" class="menu-list__link">Contact</a>
-                            <a href="#" class="menu-list__link">Tantra team</a>
-                            <a href="#" class="menu-list__link">Gallery</a>
+                            <a href="team.html" class="menu-list__link">Tantra team</a>
+                            <a href="galary.html" class="menu-list__link">Gallery</a>
                         </nav>
                     </div>
                     <div class="menu-social">
@@ -48,7 +49,7 @@
                 </div>
             </div>
             <div class="header-logo">
-                <a href="">
+                <a href="index.html">
                     <img src="img/logo.png" alt="" class="header-logo__img d-none d-md-block">
                     <img src="img/logo-mobile.png" alt="" class="header-logo__img d-block d-md-none">
                 </a>
@@ -60,8 +61,8 @@
                     <a href="price.html" class="header-menu__link">Price list</a>
                     <a href="massages.html" class="header-menu__link">Massages</a>
                     <a href="contact.html" class="header-menu__link">Contact</a>
-                    <a href="#" class="header-menu__link">Tantra team</a>
-                    <a href="#" class="header-menu__link">Gallery</a>
+                    <a href="team.html" class="header-menu__link">Tantra team</a>
+                    <a href="galary.html" class="header-menu__link">Gallery</a>
                 </nav>
             </div>
 
@@ -78,7 +79,7 @@
                     <a href="">0948 158 888</a>
                 </div>
                 <div class="header-phone__callback">
-                    <a href="">Request a call</a>
+                    <a href="" data-popup>Request a call</a>
                 </div>
             </div>
 
@@ -86,7 +87,12 @@
     </div>
 </div>
 
-    <div class="main-video">
+    <div class="main-video video-hero jquery-background-video-wrapper">
+        <video class="jquery-background-video" autoplay muted loop >
+            <source src="video/videoplayback.mp4" type="video/mp4">
+            <source src="video/videoplayback.webm" type="video/webm">
+            <source src="video/videoplayback.ogv" type="video/ogg">
+        </video>
         <div class="container">
             <div class="row">
                 <div class="col-xl-auto">
@@ -96,7 +102,7 @@
                             <br>
                             <span>BODY TOUCH</span>
                         </h1>
-                        <a href="" class="info-link">
+                        <a href="" data-popup class="info-link">
                             <button>Visit us</button>
                         </a>
                     </div>
@@ -240,7 +246,7 @@
                         <p>A good selection and professional massage create a great way to regenerate the body and muscles, as well as the soul and mind.</p>
                     </div>
                 </div>
-                <div class="col-xl-4 offset-xl-1 col-8">
+                <div class="col-xl-4 offset-xl-1 col-8 col-lg-5">
                     <div class="team-img">
                         <img src="img/img-team.png" alt="">
                         <div class="team-name">
@@ -248,7 +254,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-7 col-4 team-desktop">
+                <div class="col-xl-7 col-lg-7 col-4 team-desktop">
                     <div class="team-title">
                         <h2>Tantra team</h2>
                     </div>
@@ -354,7 +360,7 @@
     <div class="info">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-4">
                     <div class="info-content">
                         <div class="info-content__sex">
                             <div class="sex-icon">
@@ -380,12 +386,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-4">
                     <div class="info-img">
                         <img src="img/what.png" alt="">
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-4">
                     <div class="info-list">
                         <div class="info-item">
                             <div class="item-icon">
@@ -429,7 +435,7 @@
                             <p>visit us</p>
                         </div>
                         <div class="row no-gutters">
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-lg-6">
                                 <div class="visit-form">
                                     <div class="visit-title">
                                         <p>leave a request</p>
@@ -458,7 +464,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-6 col-lg-6">
                                 <div class="visit-img">
                                     <img src="img/request-img.png" alt="">
                                 </div>
@@ -487,7 +493,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6">
                     <div class="apartments-wrapper">
                         <div class="apartments-slider swiper-container">
                             <div class="swiper-wrapper">
@@ -525,7 +531,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 apartments-desktop">
+                <div class="col-xl-6 col-lg-6 apartments-desktop">
                     <div class="apartments-content">
                         <div class="content-title">
                             <h2>Apartments</h2>
@@ -580,14 +586,14 @@
     <div class="footer">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-3 col-12">
+                <div class="col-xl-3 col-lg-3 col-12">
                     <div class="footer-logo">
                         <a href="">
                             <img src="img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-6">
+                <div class="col-xl-2 col-lg-2 col-6">
                     <div class="footer-street">
                         <div class="street-marker">
                             <img src="img/map.svg" alt="">
@@ -598,26 +604,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-6">
+                <div class="col-xl-2 col-lg-2 col-6">
                     <div class="footer-policy">
                         <a href="">
                             Privacy policy
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-12">
+                <div class="col-xl-2 col-lg-2 col-12">
                     <div class="footer-phone">
                         <div class="footer-phone__tel">
                             <a href="">0948 158 888</a>
                         </div>
                         <div class="footer-phone__callback">
-                            <a href="">Request a call</a>
+                            <a href="" data-popup>Request a call</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-12">
+                <div class="col-xl-3 col-lg-3 col-12">
                     <div class="footer-callback">
-                        <a href="">
+                        <a href="" data-popup>
                             <button>Visit us</button>
                         </a>
                     </div>
@@ -626,8 +632,45 @@
         </div>
     </div>
 
+
+    <div class="popup">
+        <div class="popup-bg"></div>
+        <div class="popup-wrapper">
+            <div class="popup-title">
+                <p>leave a request</p>
+            </div>
+            <div class="popup-input">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="popup-input">
+                <input type="text" placeholder="Phone Number">
+            </div>
+            <div class="popup-input">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="popup-textarea">
+                <textarea name="" placeholder="Message" ></textarea>
+            </div>
+            <div class="popup-policy">
+                <input type="checkbox" id="posl">
+                <label for="posl">
+                            <span class="policy-icon">
+                                <img src="img/tick.png" alt="">
+                            </span>
+                </label>
+                <p>I agree to the processing of personal data <br><a href="">Privacy policy
+                </a></p>
+            </div>
+            <div class="popup-submit">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+
     <!--  Jquery  -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!--  JQ Video  -->
+    <script src="js/jquery.background-video.js"></script>
     <!--  Swiper JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!--  Custom script  -->
